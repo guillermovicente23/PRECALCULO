@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigación: Números Complejos</title>
+    <!-- Carga de Tailwind CSS para estilos modernos y responsivos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fuente Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Carga de MathJax para renderizar fórmulas LaTeX -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            }
+        };
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Estilo para los títulos de las operaciones */
+        .op-title {
+            border-bottom: 2px solid #e0e7ff; /* indigo-100 */
+            padding-bottom: 8px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen p-4 sm:p-8">
+
+    <div class="max-w-4xl mx-auto space-y-12">
+
+        <!-- HEADER Y TÍTULO PRINCIPAL -->
+        <header class="text-center pt-8 pb-4 bg-white rounded-xl shadow-lg">
+            <h1 class="text-5xl font-extrabold text-indigo-700 leading-tight">
+                El Universo de los Números Complejos
+            </h1>
+            <p class="mt-3 text-xl font-medium text-gray-600">
+                Una extensión fundamental de las Matemáticas
+            </p>
+        </header>
+
+        <!-- 1. INTRODUCCIÓN E HISTORIA -->
+        <section class="bg-white p-6 sm:p-8 rounded-xl shadow-2xl border border-indigo-100">
+            <h2 class="text-3xl font-bold mb-6 text-indigo-600">
+                1. Introducción e Historia: El Nacimiento de un Nuevo Universo Numérico
+            </h2>
+
+            <div class="space-y-6 text-gray-700">
+                <h3 class="text-xl font-semibold text-gray-800">Inicio de la Investigación</h3>
+                <p>
+                    Los números complejos son una extensión de los números reales (los que usamos para contar, medir y comparar). Nacen de una necesidad fundamental: dar solución a problemas que, en el mundo de los números reales, no la tendrían. El caso más famoso es la raíz cuadrada de un número negativo, como $\sqrt{-1}$.
+                </p>
+                <p>
+                    Durante siglos, este problema fue considerado un callejón sin salida, algo "imposible" o "imaginario". Sin embargo, la aceptación de un nuevo tipo de número, la **unidad imaginaria** ($i$, donde $i^2 = -1$), no solo resolvió este enigma, sino que abrió la puerta a una rama de las matemáticas con aplicaciones profundas y esenciales para describir el mundo que nos rodea.
+                </p>
+                <p>
+                    Esta investigación explora la definición, historia y las operaciones fundamentales (suma, resta, multiplicación y división) de los números complejos, demostrando que de "imaginarios" solo tienen el nombre.
+                </p>
+
+                <h3 class="text-xl font-semibold text-gray-800 pt-4">Breve Historia</h3>
+                <p>
+                    La historia de los números complejos no comienza con la $\sqrt{-1}$ en sí misma, sino con la búsqueda de soluciones a ecuaciones cúbicas (de tercer grado) en el siglo XVI. 
+                </p>
+
+                <ul class="space-y-3 pl-5 list-disc">
+                    <li>
+                        <span class="font-bold text-indigo-600">Gerolamo Cardano (1545):</span> Al intentar resolver ecuaciones cúbicas, se topó con un problema: su fórmula general (la fórmula de Cardano-Tartaglia) a veces requería calcular raíces cuadradas de números negativos, incluso cuando la respuesta final era un número real perfectamente normal. Él los llamó números "sofisticados" o "ficticios".
+                    </li>
+                    <li>
+                        <span class="font-bold text-indigo-600">Rafael Bombelli (1572):</span> Fue Bombelli quien tomó en serio estos números "ficticios". Estableció las reglas aritméticas básicas para operar con ellos (cómo sumarlos, multiplicarlos, etc.) y demostró que, usándolos como un paso intermedio, podía llegar a las soluciones reales que Cardano buscaba.
+                    </li>
+                    <li>
+                        <span class="font-bold text-indigo-600">Leonhard Euler (Siglo XVIII):</span> Euler fue quien introdujo la notación $i$ para $\sqrt{-1}$ en 1777, dándonos la notación moderna. También descubrió la famosa "Identidad de Euler" ($e^{i\pi} + 1 = 0$), que conecta de forma casi mágica los cinco números más importantes de las matemáticas. 
+                    </li>
+                    <li>
+                        <span class="font-bold text-indigo-600">Carl Friedrich Gauss (Siglo XIX):</span> Gauss les dio el nombre de "números complejos" y probó el Teorema Fundamental del Álgebra, que establece que toda ecuación polinómica tiene al menos una solución dentro del mundo de los números complejos.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 2. APLICACIONES PRÁCTICAS -->
+        <section class="bg-white p-6 sm:p-8 rounded-xl shadow-2xl border border-indigo-100">
+            <h2 class="text-3xl font-bold mb-6 text-indigo-600">
+                2. Aplicaciones Prácticas (Usos en la "Vida Cotidiana")
+            </h2>
+
+            <div class="space-y-6 text-gray-700">
+                <p>
+                    Aunque no usamos la $i$ para comprar en el supermercado, tu vida diaria depende totalmente de los números complejos. Su verdadera utilidad está en describir fenómenos que **oscilan o rotan**.
+                </p>
+                <ul class="space-y-4 pl-5 list-disc">
+                    <li>
+                        <span class="font-bold text-gray-800">Ingeniería Eléctrica y Electrónica:</span> Es la aplicación más importante. En la corriente alterna (AC) —la que llega a tus enchufes— el voltaje y la corriente no son constantes, sino que oscilan como una onda. Los números complejos (usando $j$ en lugar de $i$ para no confundirlo con la corriente) son la herramienta esencial para analizar estos circuitos de forma sencilla. 
+                    </li>
+                    <li>
+                        <span class="font-bold text-gray-800">Telecomunicaciones:</span> Tu teléfono móvil, el Wi-Fi, la radio FM y la televisión funcionan procesando señales electromagnéticas. Estas señales son ondas. Los números complejos se usan (mediante la Transformada de Fourier) para descomponer, filtrar y modular estas señales, permitiendo que hables por teléfono o veas un video sin interferencias.
+                    </li>
+                    <li>
+                        <span class="font-bold text-gray-800">Física:</span> Son fundamentales en mecánica cuántica (para describir la probabilidad de dónde está una partícula), en la dinámica de fluidos (para analizar cómo fluye el aire sobre el ala de un avión) y en el electromagnetismo.
+                    </li>
+                    <li>
+                        <span class="font-bold text-gray-800">Gráficos por Computadora:</span> Los famosos gráficos "fractales", como el conjunto de Mandelbrot, se generan usando operaciones repetitivas con números complejos.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 3. OPERACIONES CON NÚMEROS COMPLEJOS -->
+        <section class="bg-white p-6 sm:p-8 rounded-xl shadow-2xl border border-indigo-100">
+            <h2 class="text-3xl font-bold mb-6 text-indigo-600">
+                3. Operaciones con Números Complejos
+            </h2>
+
+            <p class="mb-8 text-gray-700">
+                Los números complejos son expresiones de la forma $z=a+bi$, donde $a$ es la parte real, $b$ es la parte imaginaria, y $i$ es la unidad imaginaria, tal que $i^2=-1$. A continuación, se explican las principales operaciones que pueden realizarse.
+            </p>
+
+            <div class="space-y-8">
+                <!-- SUMA -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800 op-title mb-4">1. Suma de números complejos</h3>
+                    <p class="text-gray-700">Para sumar dos números complejos, se suman las partes reales entre sí y las partes imaginarias entre sí.</p>
+                    <div class="my-4 p-3 bg-indigo-100 rounded-md font-mono text-center text-lg text-indigo-800">
+                        $$(a+bi)+(c+di)=(a+c)+(b+d)i$$
+                    </div>
+                    <p class="font-semibold text-gray-800">Ejemplo:</p>
+                    <p class="p-2 bg-gray-100 rounded-md font-mono text-gray-700">
+                        $(3+2i)+(4+5i)=(3+4)+(2+5)i = 7+7i$
+                    </p>
+                    <p class="text-sm mt-3 text-gray-500">Interpretación: La suma combina los componentes horizontales (reales) y verticales (imaginarios) en el plano complejo.</p>
+                </div>
+
+                <!-- RESTA -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800 op-title mb-4">2. Resta de números complejos</h3>
+                    <p class="text-gray-700">Se restan las partes reales y las partes imaginarias respectivamente.</p>
+                    <div class="my-4 p-3 bg-indigo-100 rounded-md font-mono text-center text-lg text-indigo-800">
+                        $$(a+bi)-(c+di)=(a-c)+(b-d)i$$
+                    </div>
+                    <p class="font-semibold text-gray-800">Ejemplo:</p>
+                    <p class="p-2 bg-gray-100 rounded-md font-mono text-gray-700">
+                        $(6+3i)-(2+5i)=(6-2)+(3-5)i = 4-2i$
+                    </p>
+                    <p class="text-sm mt-3 text-gray-500">Interpretación: La resta representa el desplazamiento de un punto complejo respecto a otro.</p>
+                </div>
+
+                <!-- MULTIPLICACIÓN -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800 op-title mb-4">3. Multiplicación de números complejos</h3>
+                    <p class="text-gray-700">Para multiplicar, se aplica la propiedad distributiva y se recuerda que $i^2=-1$:</p>
+                    <div class="my-4 p-3 bg-indigo-100 rounded-md font-mono text-center text-base text-indigo-800">
+                        $$(a+bi)(c+di) = (ac-bd)+(ad+bc)i$$
+                    </div>
+                    <p class="font-semibold text-gray-800">Ejemplo:</p>
+                    <p class="p-2 bg-gray-100 rounded-md font-mono text-gray-700">
+                        $(2+3i)(4+i) = (2 \times 4 - 3 \times 1) + (2 \times 1 + 3 \times 4)i = (8-3)+(2+12)i = 5+14i$
+                    </p>
+                    <p class="text-sm mt-3 text-gray-500">Interpretación: La multiplicación cambia tanto la magnitud como la dirección del número complejo en el plano. </p>
+                </div>
+
+                <!-- DIVISIÓN -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800 op-title mb-4">4. División de números complejos</h3>
+                    <p class="text-gray-700">
+                        Para dividir, se multiplica numerador y denominador por el **conjugado** del denominador ($c-di$).
+                    </p>
+                    <p class="text-sm italic text-gray-500 mb-3">
+                        El denominador se vuelve real porque: $(c+di)(c-di)=c^2+d^2$.
+                    </p>
+                    <div class="my-4 p-3 bg-indigo-100 rounded-md font-mono text-center text-lg text-indigo-800">
+                        $$\frac{a+bi}{c+di} = \frac{(a+bi)(c-di)}{(c+di)(c-di)} = \frac{(ac+bd)+(bc-ad)i}{c^2+d^2}$$
+                    </div>
+                    <p class="font-semibold text-gray-800">Ejemplo:</p>
+                    <p class="p-2 bg-gray-100 rounded-md font-mono text-gray-700">
+                        $$\frac{3+2i}{1-i} = \frac{(3+2i)(1+i)}{(1-i)(1+i)} = \frac{3+3i+2i+2i^2}{2} = \frac{1+5i}{2} = 0.5+2.5i$$
+                    </p>
+                    <p class="text-sm mt-3 text-gray-500">Interpretación: La división equivale a ajustar la escala y la rotación del número complejo.</p>
+                </div>
+            </div>
+
+            <p class="mt-8 text-lg font-medium text-center text-indigo-700">
+                Dominar estas operaciones es fundamental para resolver ecuaciones complejas y para aplicaciones esenciales en ingeniería, electricidad y física.
+            </p>
+        </section>
+
+        <!-- 4. CALCULADORA DE NÚMEROS COMPLEJOS (NUEVA SECCIÓN) -->
+        <section class="bg-white p-6 sm:p-8 rounded-xl shadow-2xl border border-indigo-100">
+            <h2 class="text-3xl font-bold mb-6 text-indigo-600">
+                4. Calculadora de Números Complejos
+            </h2>
+
+            <!-- Inputs for Z1 -->
+            <div class="mb-6 border p-4 rounded-xl bg-indigo-50 border-indigo-200">
+                <h3 class="text-lg font-semibold mb-3 text-indigo-800">Número Complejo $Z_1$ ($a + bi$)</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <input type="number" id="a_real" placeholder="Parte Real (a)" value="2" class="p-3 border border-indigo-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 shadow-sm">
+                    <input type="number" id="b_imag" placeholder="Parte Imaginaria (b)" value="3" class="p-3 border border-indigo-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 shadow-sm">
+                </div>
+            </div>
+
+            <!-- Inputs for Z2 -->
+            <div class="mb-8 border p-4 rounded-xl bg-indigo-50 border-indigo-200">
+                <h3 class="text-lg font-semibold mb-3 text-indigo-800">Número Complejo $Z_2$ ($c + di$)</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <input type="number" id="c_real" placeholder="Parte Real (c)" value="4" class="p-3 border border-indigo-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 shadow-sm">
+                    <input type="number" id="d_imag" placeholder="Parte Imaginaria (d)" value="1" class="p-3 border border-indigo-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 shadow-sm">
+                </div>
+            </div>
+
+            <!-- Operation Buttons -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+                <button onclick="calculateComplex('add')" class="py-3 bg-indigo-600 text-white font-bold rounded-lg shadow-md hover:bg-indigo-700 transition transform hover:scale-105">Z1 + Z2</button>
+                <button onclick="calculateComplex('subtract')" class="py-3 bg-indigo-600 text-white font-bold rounded-lg shadow-md hover:bg-indigo-700 transition transform hover:scale-105">Z1 - Z2</button>
+                <button onclick="calculateComplex('multiply')" class="py-3 bg-indigo-600 text-white font-bold rounded-lg shadow-md hover:bg-indigo-700 transition transform hover:scale-105">Z1 &times; Z2</button>
+                <button onclick="calculateComplex('divide')" class="py-3 bg-indigo-600 text-white font-bold rounded-lg shadow-md hover:bg-indigo-700 transition transform hover:scale-105">Z1 / Z2</button>
+            </div>
+
+            <!-- Results -->
+            <div class="p-6 bg-gray-100 rounded-xl shadow-inner border border-gray-300">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Resultado:</h3>
+                <p id="resultDisplay" class="text-3xl font-mono text-gray-900 break-words font-semibold">
+                    Selecciona una operación
+                </p>
+            </div>
+
+            <div id="errorBox" class="mt-4 p-3 bg-red-100 text-red-700 rounded-lg hidden font-medium"></div>
+        </section>
+
+
+        <footer class="text-center py-6 text-gray-500 text-sm">
+            <p>&copy; Investigación sobre Números Complejos</p>
+        </footer>
+    </div>
+    
+    <!-- JavaScript para la calculadora -->
+    <script>
+        // Función principal para manejar las operaciones con números complejos
+        function calculateComplex(operation) {
+            // Obtener los valores de entrada. Usamos parseFloat para manejar números decimales
+            // Z1 = a + bi
+            const a = parseFloat(document.getElementById('a_real').value) || 0;
+            const b = parseFloat(document.getElementById('b_imag').value) || 0;
+            // Z2 = c + di
+            const c = parseFloat(document.getElementById('c_real').value) || 0;
+            const d = parseFloat(document.getElementById('d_imag').value) || 0;
+
+            const resultDisplay = document.getElementById('resultDisplay');
+            const errorBox = document.getElementById('errorBox');
+            
+            // Limpiar mensajes de error anteriores
+            errorBox.classList.add('hidden');
+            resultDisplay.textContent = 'Calculando...';
+
+            let resultReal, resultImag;
+
+            try {
+                switch (operation) {
+                    case 'add':
+                        // Z1 + Z2 = (a + c) + (b + d)i
+                        resultReal = a + c;
+                        resultImag = b + d;
+                        break;
+                    case 'subtract':
+                        // Z1 - Z2 = (a - c) + (b - d)i
+                        resultReal = a - c;
+                        resultImag = b - d;
+                        break;
+                    case 'multiply':
+                        // Z1 * Z2 = (ac - bd) + (ad + bc)i
+                        resultReal = (a * c) - (b * d);
+                        resultImag = (a * d) + (b * c);
+                        break;
+                    case 'divide':
+                        // Z1 / Z2 = [(ac + bd) / (c^2 + d^2)] + [(bc - ad) / (c^2 + d^2)]i
+                        const denominator = (c * c) + (d * d);
+                        
+                        // Manejar división por cero
+                        if (denominator === 0) {
+                            throw new Error("División por cero. El denominador (Z2) no puede ser cero.");
+                        }
+
+                        resultReal = ((a * c) + (b * d)) / denominator;
+                        resultImag = ((b * c) - (a * d)) / denominator;
+                        break;
+                    default:
+                        throw new Error("Operación no reconocida.");
+                }
+                
+                // Redondear a un número razonable de decimales (ej. 4)
+                resultReal = parseFloat(resultReal.toFixed(4));
+                resultImag = parseFloat(resultImag.toFixed(4));
+
+                // Formatear el resultado para mostrarlo como a + bi
+                let resultString = '';
+                
+                // 1. Manejar el caso de resultado cero (0 + 0i)
+                if (resultReal === 0 && resultImag === 0) {
+                     resultString = '0';
+                }
+                // 2. Manejar solo la parte real
+                else if (resultImag === 0) {
+                    resultString = resultReal.toString();
+                }
+                // 3. Manejar solo la parte imaginaria
+                else if (resultReal === 0) {
+                    const imagValue = Math.abs(resultImag);
+                    const sign = resultImag < 0 ? '-' : '';
+                    
+                    // Si es |1|i, muestra solo i
+                    if (imagValue === 1) {
+                        resultString = sign + 'i';
+                    } else {
+                        resultString = sign + imagValue + 'i';
+                    }
+                }
+                // 4. Manejar a + bi (completo)
+                else {
+                    resultString = resultReal.toString();
+                    const sign = resultImag > 0 ? ' + ' : ' - ';
+                    const imagValue = Math.abs(resultImag);
+                    
+                    if (imagValue === 1) {
+                        resultString += sign + 'i';
+                    } else {
+                        resultString += sign + imagValue + 'i';
+                    }
+                }
+                
+                resultDisplay.textContent = resultString;
+
+            } catch (e) {
+                errorBox.textContent = 'Error: ' + e.message;
+                errorBox.classList.remove('hidden');
+                resultDisplay.textContent = '¡Error en el cálculo!';
+            }
+        }
+        
+        // Ejecutar una operación de ejemplo al cargar la página (ej. la suma de los valores iniciales)
+        document.addEventListener('DOMContentLoaded', () => {
+            calculateComplex('add'); 
+        });
+    </script>
+</body>
+</html>
